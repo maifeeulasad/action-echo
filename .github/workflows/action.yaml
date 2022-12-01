@@ -1,0 +1,26 @@
+name: build Android
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 'Linux info'
+      run: lsb_release -a
+    - name: 'Exporting var'    
+      run: export TEST=/test
+    - name: 'Exporting path'    
+      run: export PATH="${PATH}:$TEST/a/bin"
+    - name: 'Reload bash'    
+      run: . ~/.bashrc
+    - name: 'echo'
+      run: echo $TEST
+    - name: 'echo'
+      run: echo $PATH | tr ':' '\n'
