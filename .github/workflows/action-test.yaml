@@ -14,3 +14,5 @@ jobs:
     steps:
      - name: 'echo'
        run: echo $PATH
+     - name: 'update?'
+       run: sudo apt-get update -y
