@@ -9,7 +9,7 @@ on:
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     env:
       PATH: $PATH:/usr/lib/android-sdk/cmdline-tools/bin
